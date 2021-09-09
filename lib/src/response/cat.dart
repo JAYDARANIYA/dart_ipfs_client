@@ -6,7 +6,7 @@ part 'cat.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Cat {
   @JsonKey(name: 'Body')
-  String body;
+  String? body;
 
   Cat({this.body});
 

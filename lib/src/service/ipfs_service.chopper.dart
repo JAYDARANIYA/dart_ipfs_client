@@ -8,7 +8,7 @@ part of 'ipfs_service.dart';
 
 // ignore_for_file: always_put_control_body_on_new_line, always_specify_types, prefer_const_declarations
 class _$IpfsService extends IpfsService {
-  _$IpfsService([ChopperClient client]) {
+  _$IpfsService([ChopperClient? client]) {
     if (client == null) return;
     this.client = client;
   }
@@ -26,7 +26,7 @@ class _$IpfsService extends IpfsService {
   }
 
   @override
-  Future<Response<Cat>> cat(String arg) {
+  Future<Response<Cat>> cat(String? arg) {
     final $url = '/api/v0/cat';
     final $params = <String, dynamic>{'arg': arg};
     final $request = Request('POST', $url, client.baseUrl, parameters: $params);

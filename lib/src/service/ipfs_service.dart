@@ -14,7 +14,7 @@ abstract class IpfsService extends ChopperService {
   Future<Response<Add>> add(@PartFile('path') List<int> file);
 
   @Post(path: '/cat', optionalBody: true)
-  Future<Response<Cat>> cat(@Query('arg') String arg);
+  Future<Response<Cat>> cat(@Query('arg') String? arg);
 
   static IpfsService create(String url) {
     final client = ChopperClient(

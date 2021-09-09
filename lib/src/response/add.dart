@@ -6,16 +6,16 @@ part 'add.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Add {
   @JsonKey(name: 'Bytes')
-  int bytes;
+  int? bytes;
 
   @JsonKey(name: 'Hash')
-  String hash;
+  String? hash;
 
   @JsonKey(name: 'Name')
-  String name;
+  String? name;
 
   @JsonKey(name: 'Size')
-  String size;
+  String? size;
 
   Add({this.bytes, this.hash, this.name, this.size});
 

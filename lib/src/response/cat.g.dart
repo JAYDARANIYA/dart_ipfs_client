@@ -8,7 +8,7 @@ part of 'cat.dart';
 
 Cat _$CatFromJson(Map<String, dynamic> json) {
   return Cat(
-    body: json['Body'] as String,
+    body: json['Body'] as String?,
   );
 }
 

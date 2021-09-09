@@ -6,7 +6,7 @@ import '../response/cat.dart';
 
 /// Provides access to IPFS HTTP API.
 class Ipfs {
-  IpfsService _service;
+  IpfsService? _service;
 
   /// Creates new IPFS instance.
   ///
@@ -15,17 +15,17 @@ class Ipfs {
     _service = IpfsService.create(url);
   }
 
-  IpfsService ipfs() {
+  IpfsService? ipfs() {
     return _service;
   }
 
   /// Uses '/api/v0/add' endpoint to add bytes to IPFS.
   Future<Response<Add>> add(List<int> contents) {
-    return _service.add(contents);
+    return _service!.add(contents);
   }
 
   /// Uses '/api/v0/cat' endpoint to read data from IPFS.
-  Future<Response<Cat>> cat(String arg) {
-    return _service.cat(arg);
+  Future<Response<Cat>> cat(String? arg) {
+    return _service!.cat(arg);
   }
 }

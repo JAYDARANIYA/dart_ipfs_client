@@ -8,10 +8,10 @@ part of 'add.dart';
 
 Add _$AddFromJson(Map<String, dynamic> json) {
   return Add(
-    bytes: json['Bytes'] as int,
-    hash: json['Hash'] as String,
-    name: json['Name'] as String,
-    size: json['Size'] as String,
+    bytes: json['Bytes'] as int?,
+    hash: json['Hash'] as String?,
+    name: json['Name'] as String?,
+    size: json['Size'] as String?,
   );
 }
 
